@@ -25,7 +25,7 @@ class _PageSplashState extends State<PageSplash> {
     return Scaffold(
       body: Center(
           child: Image(
-        image: const AssetImage(Media.appStore),
+        image: const AssetImage(AppMedia.appStore),
         width: MediaQuery.of(context).size.width / AppDime.xs,
       )),
     );

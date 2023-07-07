@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-
-class Media {
+part of '../import-path/app_import_path.dart';
+class AppMedia {
   //* images
   static const String profileNew = "assets/images/account.png";
   static const String iconInstall = "assets/images/icon_install.png";
@@ -13,6 +11,8 @@ class Media {
   static const String notFoundImage = "assets/images/image_not_found.png";
   static const String testImageNetwork =
       "https://static9.depositphotos.com/1011646/1236/i/950/depositphotos_12369509-stock-photo-breaking-news-screen.jpg";
+  static const String social = "assets/images/socialmedia.png";
+  // static const String social = "assets\images\social.jpg";
 
   //*    icon
   static const String appStore = "assets/icons/app_store.png";
@@ -21,6 +21,8 @@ class Media {
   static const String logout = "assets/icons/logout.svg";
   static const String paint = "assets/icons/paint.svg";
   static const String premium = "assets/icons/premium.svg";
+  static const String diamond1 = 'assets/icons/diamond1.svg';
+
   static const String socialMedia = "assets/icons/social_media.svg";
   static const String terms = "assets/icons/terms.svg";
   static const String translate = "assets/icons/translate.svg";
