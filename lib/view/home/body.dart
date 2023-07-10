@@ -9,6 +9,7 @@ class PageHome extends StatelessWidget {
       initialIndex: 1,
       length: 2,
       child: Scaffold(
+        
         appBar:const CustomAppBar(),
         body: TabBarView(children: [
           Container(color: Colors.red,),
