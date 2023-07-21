@@ -5,17 +5,20 @@ class PageHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  DefaultTabController(
+    return DefaultTabController(
       initialIndex: 1,
       length: 2,
       child: Scaffold(
-        
-        appBar:const CustomAppBar(),
+        appBar: const CustomAppBar(),
         body: TabBarView(children: [
-          Container(color: Colors.red,),
-          Container(color: Colors.indigo,),
+          Container(
+            color: Colors.red,
+          ),
+          Container(
+            color: Colors.indigo,
+          ),
         ]),
-        drawer:const Drawer(),
+        drawer: const Drawer(),
       ),
     );
   }

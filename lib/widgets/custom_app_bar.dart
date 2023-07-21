@@ -6,12 +6,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
-      foregroundColor: Colors.black,
-      centerTitle: true,
+      // backgroundColor: Colors.white,
+      // foregroundColor: Colors.black,
+      // centerTitle: true,
       title: Text(
-        "App Store",
-        style: GoogleFonts.roboto(fontSize: AppDime.xl.sp),
+        AppLangKey.appName.tr(),
+        style: Theme.of(context).textTheme.titleLarge,
+        // style: GoogleFonts.roboto(fontSize: AppDime.xl.sp),
       ),
       actions: [
         IconButton(
@@ -23,7 +24,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               height: AppDime.xl.h,
             ))
       ],
-      bottom: const TabBar(labelColor: Colors.black, tabs: [
+      bottom: const TabBar(tabs: [
         TabBarItems(title: "Social Media", image: AppMedia.socialMedia),
         TabBarItems(title: "premuim", image: AppMedia.diamond1),
       ]),

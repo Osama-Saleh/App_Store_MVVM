@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 
 //* part Pages
@@ -19,3 +20,6 @@ part '../../widgets/tap_bar_items.dart';
 
 //* parts of Utils
 part '../constant/app_media.dart';
+part '../theme/app_color.dart';
+part '../theme/app_theme.dart';
+part '../language/app_lang_key.dart';
