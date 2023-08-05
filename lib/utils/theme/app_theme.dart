@@ -17,4 +17,13 @@ static ThemeData dark(BuildContext context){
       appBarTheme:const AppBarTheme(centerTitle: true),
     );
   }
+
+///[isDart] Check choose theme return bool
+///
+///'true' = Dark
+///
+///'false' = light
+static bool isDart(BuildContext context){
+  return Theme.of(context).brightness == Brightness.dark;
+}
 }

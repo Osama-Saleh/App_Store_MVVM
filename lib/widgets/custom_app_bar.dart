@@ -19,14 +19,15 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             onPressed: () {},
             icon: SvgPicture.asset(
               AppMedia.myApp,
-              semanticsLabel: 'A red up arrow',
+              colorFilter: ColorFilter.mode(AppColor.bgWhite, BlendMode.difference),
               width: AppDime.xl.w,
               height: AppDime.xl.h,
             ))
       ],
-      bottom: const TabBar(tabs: [
-        TabBarItems(title: "Social Media", image: AppMedia.socialMedia),
-        TabBarItems(title: "premuim", image: AppMedia.diamond1),
+      bottom:  TabBar(
+        tabs: [
+        TabBarItems(title: AppLangKey.socialMediaTab.tr(), image: AppMedia.socialMedia),
+        TabBarItems(title: AppLangKey.premiumTab.tr(), image: AppMedia.premium),
       ]),
     );
   }

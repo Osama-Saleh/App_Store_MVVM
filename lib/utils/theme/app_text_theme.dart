@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../import-path/app_import_path.dart';
 
 class AppTextTheme {
 
