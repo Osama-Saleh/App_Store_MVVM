@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
  const String kEn = 'en';
@@ -11,4 +12,9 @@ class AppLanguageConfig {
   static Locale arLocal = const Locale(kAr);
 
   static List<Locale> supportLocal = [enLocal,arLocal];
+
+///[currentlanguage] `en` or `ar`
+  static String currentLanguage(BuildContext context){
+  return  context.locale.languageCode;
+  }
 }

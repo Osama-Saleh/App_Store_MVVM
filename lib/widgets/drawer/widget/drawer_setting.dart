@@ -1,22 +1,17 @@
+import 'package:app_store/controller/c_theme.dart';
 import 'package:app_store/utils/import-path/app_import_path.dart';
-import 'package:app_store/utils/language/app_lang.dart';
 import 'package:app_store/widgets/drawer/widget/drawer_setting_lang.dart';
 import 'package:app_store/widgets/drawer/widget/drawet_setting_design.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-class DrawerSetting extends StatefulWidget {
+class DrawerSetting extends StatelessWidget {
   const DrawerSetting({super.key});
 
   @override
-  State<DrawerSetting> createState() => _DrawerSettingState();
-}
-
-bool isTheme = false;
-
-class _DrawerSettingState extends State<DrawerSetting> {
-  @override
   Widget build(BuildContext context) {
+var controllerTheme = Provider.of<ControllerTheme>(context);
     return Column(
       children: [
         DrawerSettingDesign(
@@ -26,17 +21,14 @@ class _DrawerSettingState extends State<DrawerSetting> {
         DrawerSettingDesign(
           leadingIcon: AppMedia.translate,
           title: AppLangKey.language.tr(),
-          trailing: DrawerSettingLanguage(),
+          trailing: const DrawerSettingLanguage(),
         ),
         DrawerSettingDesign(
           leadingIcon: AppMedia.theme,
-          title: AppLangKey.themes.tr(),
+          title: controllerTheme.themeName.tr(),
           trailing: Switch(
-            value: isTheme,
-            onChanged: (value) {
-              isTheme = value;
-              setState(() {});
-            },
+            value: controllerTheme.isDark,
+            onChanged: controllerTheme.changeTheme
           ),
         ),
         DrawerSettingDesign(

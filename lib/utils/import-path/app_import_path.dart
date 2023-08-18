@@ -1,11 +1,17 @@
 import 'dart:async';
+import 'package:app_store/start-app/provider_list.dart';
+import 'package:app_store/utils/language/app_lang.dart';
 import 'package:app_store/widgets/drawer/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:provider/provider.dart';
+
+import '../../controller/c_theme.dart';
 
 
 //* part Pages
@@ -30,3 +36,10 @@ part '../theme/app_color.dart';
 part '../theme/app_theme.dart';
 part '../language/app_lang_key.dart';
 part '../dime/app_dime.dart';
+part '../restart/app_restart.dart';
+//*controller 
+part '../../controller/c_languages.dart';
+
+//* start APP
+part '../../start-app/start_app.dart';
+part '../../start-app/material_app.dart';
