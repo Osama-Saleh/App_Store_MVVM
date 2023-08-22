@@ -5,22 +5,16 @@ class PageHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
+    return const DefaultTabController(
       length: 2,
       child: Scaffold(
-        appBar: const CustomAppBar(),
-        body: TabBarView(children: [
-          const SocialGridView(),
-          Container(
-            color: Colors.indigo,
-          ),
+        appBar: CustomAppBar(),
+        body: TabBarView(physics: NeverScrollableScrollPhysics( ), children: [
+          SocialGridView(),
+          PremiumTap(),
         ]),
-        drawer: const CustomDrawer(),
+        drawer: CustomDrawer(),
       ),
     );
   }
 }
-
-
-
-

@@ -29,6 +29,10 @@ part '../../widgets/images/widget_asset_image.dart';
 //* themes
 part '../theme/app_text_theme.dart';
 
+//*components
+part '../../view/home/components/premium/premium_card.dart';
+part '../../view/home/components/premium/premium_tap.dart';
+part '../../view/home/components/premium/premium_card_categories.dart';
 
 //* parts of Utils
 part '../constant/app_media.dart';

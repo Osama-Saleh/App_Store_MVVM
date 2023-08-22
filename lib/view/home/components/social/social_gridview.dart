@@ -14,7 +14,7 @@ class SocialGridView extends StatelessWidget {
         mainAxisSpacing: 2,
       ),
       itemBuilder: (context, index) {
-        return SocialCard();
+        return const SocialCard();
       },
     );
   }

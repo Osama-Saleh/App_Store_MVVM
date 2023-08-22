@@ -9,7 +9,9 @@ class SocialCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridTile(
+    return InkWell(
+      onTap: () {},
+      child: GridTile(
         footer: Card(
           color: AppColor.blackCardSocial,
           child: Padding(
@@ -20,14 +22,14 @@ class SocialCard extends StatelessWidget {
                 Expanded(
                   child: Text(
                     'socialMedia',
-                    style: AppTextTheme.bMedium(context)?.copyWith(
-                        fontSize: 18.sp, color: AppColor.bgBlack),
+                    style: AppTextTheme.bMedium(context)
+                        ?.copyWith(fontSize: 18.sp, color: AppColor.bgBlack),
                   ),
                 ),
                 Text(
                   '4',
                   style: AppTextTheme.bSmall(context)
-                      ?.copyWith( color: AppColor.bgBlack),
+                      ?.copyWith(color: AppColor.bgBlack),
                 ),
                 Icon(
                   Icons.star,
@@ -38,7 +40,8 @@ class SocialCard extends StatelessWidget {
             ),
           ),
         ),
-        child:CustomNetworkImage(imageUrl: AppMedia.testImageNetwork)
-        ,);
+        child: const CustomNetworkImage(imageUrl: AppMedia.testImageNetwork),
+      ),
+    );
   }
 }
