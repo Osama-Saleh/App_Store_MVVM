@@ -24,7 +24,7 @@ class AppLangKey {
   static const String themes = 'themes';
   static const String auto = 'auto';
   static const String light = 'light';
-  static const String dark = 'dark';
+static const String dark = 'dark';
 
   // * Categories
   static const String games = 'games';

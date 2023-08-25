@@ -17,7 +17,7 @@ class TabBarItems extends StatelessWidget {
           image!,
           width: 30.w,
           colorFilter: ColorFilter.mode(
-              AppThemeChoose.isDart(context)
+              AppThemeChoose.isDark(context)
                   ? AppColor.bgWhite
                   : AppColor.bgBlack,
               BlendMode.srcIn ),

@@ -10,6 +10,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:provider/provider.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../controller/c_theme.dart';
 
@@ -19,6 +20,9 @@ part '../../view/splash/body.dart';
 part '../../view/home/body.dart';
 part '../../view/home/components/social/social_card.dart';
 part '../../view/home/components/social/social_gridview.dart';
+
+//* part View
+part '../../view/webview/page_webview.dart';
 
 
 //* widgets
@@ -47,3 +51,6 @@ part '../../controller/c_languages.dart';
 //* start APP
 part '../../start-app/start_app.dart';
 part '../../start-app/material_app.dart';
+
+//* API
+part '../../api/api_key.dart';

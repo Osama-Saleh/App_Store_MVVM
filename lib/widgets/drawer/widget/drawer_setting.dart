@@ -34,6 +34,7 @@ var controllerTheme = Provider.of<ControllerTheme>(context);
         DrawerSettingDesign(
           leadingIcon: AppMedia.terms,
           title: AppLangKey.terms.tr(),
+          onTap: () => controllerTheme.onTapTerms(context),
         ),
         DrawerSettingDesign(
           leadingIcon: AppMedia.logout,

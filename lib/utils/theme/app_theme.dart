@@ -22,20 +22,28 @@ class AppThemeChoose {
     );
   }
 
-  ///[isDart] Check choose theme return bool
+  ///[isDark] Check choose theme return bool
   ///
   ///'true' = Dark
   ///
   ///'false' = light
-  static bool isDart(BuildContext context) {
+  static bool isDark(BuildContext context) {
     return Theme.of(context).brightness == Brightness.dark;
   }
 
   //check theme of devide system
   ///[brightnessSystemDevice] return false ~> light  true ~> dark
- static bool brightness() {
+  static bool brightness() {
     Brightness brightness =
         SchedulerBinding.instance.platformDispatcher.platformBrightness;
     return brightness == Brightness.dark;
+  }
+
+  static String stateTheme(context) {
+    return isDark(context) ? AppLangKey.dark : AppLangKey.light;
+  }
+
+  static Color themeColor(context) {
+    return isDark(context) ? AppColor.darkMode : AppColor.lightMode;
   }
 }

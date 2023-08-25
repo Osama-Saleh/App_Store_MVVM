@@ -8,10 +8,12 @@ class DrawerSettingDesign extends StatelessWidget {
     required this.title,
     required this.leadingIcon,
     this.trailing,
+    this.onTap,
   });
   final String title;
   final String leadingIcon;
   final Widget? trailing;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +25,7 @@ class DrawerSettingDesign extends StatelessWidget {
       ),
       title: Text(title),
       trailing: trailing,
+      onTap: onTap,
     );
   }
 }
