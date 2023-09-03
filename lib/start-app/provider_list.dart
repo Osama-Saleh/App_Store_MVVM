@@ -4,12 +4,16 @@ import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
 List<SingleChildWidget> kProviderList =[
-  //theme 
+  //* theme 
   ChangeNotifierProvider<ControllerTheme>(
           create: (_) => ControllerTheme(),
         ),
-        // language
+        //* language
   ChangeNotifierProvider<ControllerLanguages>(
           create: (_) => ControllerLanguages(),
+        ),
+        //* Api
+  ChangeNotifierProvider<ControllerApi>(
+          create: (_) => ControllerApi(),
         ),
 ];

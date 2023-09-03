@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 import 'package:app_store/start-app/provider_list.dart';
 import 'package:app_store/utils/language/app_lang.dart';
 import 'package:app_store/widgets/drawer/custom_drawer.dart';
@@ -11,8 +12,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:provider/provider.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-
+import 'package:http/http.dart' as http;
+import 'dart:convert' as convert;
 import '../../controller/c_theme.dart';
+import '../../model/social/social_model.dart';
 
 
 //* part Pages
@@ -54,3 +57,5 @@ part '../../start-app/material_app.dart';
 
 //* API
 part '../../api/api_key.dart';
+// part '../../api/api_handel.dart';
+part '../../api/api.dart';

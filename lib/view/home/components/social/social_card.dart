@@ -3,8 +3,10 @@
 part of '../../../../utils/import-path/app_import_path.dart';
 
 class SocialCard extends StatelessWidget {
+ final SocialModel socialModel;
   const SocialCard({
     super.key,
+   required  this.socialModel
   });
 
   @override
@@ -21,15 +23,15 @@ class SocialCard extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    'socialMedia',
+                    '${socialModel.nameApp}',
                     style: AppTextTheme.bMedium(context)
                         ?.copyWith(fontSize: 18.sp, color: AppColor.bgBlack),
                   ),
                 ),
                 Text(
-                  '4',
+                  '${socialModel.rating}',
                   style: AppTextTheme.bSmall(context)
-                      ?.copyWith(color: AppColor.bgBlack),
+                      ?.copyWith(color: AppColor.bgBlack,fontSize: 10.sp),
                 ),
                 Icon(
                   Icons.star,
@@ -40,7 +42,8 @@ class SocialCard extends StatelessWidget {
             ),
           ),
         ),
-        child: const CustomNetworkImage(imageUrl: AppMedia.testImageNetwork),
+        child:  CustomNetworkImage(imageUrl: socialModel.image!),
+
       ),
     );
   }
