@@ -53,6 +53,8 @@ dependencies:
   webview_flutter: ^4.2.3
   # HTTP
   http: ^1.1.0
+  #validators Check Email
+  validators: ^3.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter

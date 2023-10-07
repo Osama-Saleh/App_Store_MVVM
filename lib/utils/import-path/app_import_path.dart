@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:app_store/start-app/provider_list.dart';
 import 'package:app_store/utils/language/app_lang.dart';
 import 'package:app_store/widgets/drawer/custom_drawer.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/scheduler.dart';
@@ -14,8 +15,12 @@ import 'package:provider/provider.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
+import 'package:validators/validators.dart' as validators;
 import '../../controller/c_theme.dart';
+import '../../model/premium/premium_model.dart';
 import '../../model/social/social_model.dart';
+import 'package:easy_localization/easy_localization.dart';
+
 
 
 //* part Pages
@@ -26,6 +31,8 @@ part '../../view/home/components/social/social_gridview.dart';
 
 //* part View
 part '../../view/webview/page_webview.dart';
+part '../../view/auth/login.dart';
+part '../../view/auth/forget.dart';
 
 
 //* widgets
@@ -33,6 +40,14 @@ part '../../widgets/custom_app_bar.dart';
 part '../../widgets/tap_bar_items.dart';
 part '../../widgets/images/widget_network_image.dart';
 part '../../widgets/images/widget_asset_image.dart';
+part '../../view/auth/widgets/auth_appbar.dart';
+part '../../view/auth/widgets/auth_button.dart';
+part '../../view/auth/widgets/auth_logo.dart';
+part '../../view/auth/widgets/auth_footer.dart';
+part '../../view/auth/widgets/auth_forget.dart';
+part '../../view/auth/widgets/auth_text_form_field.dart';
+part '../../view/auth/widgets/auth_mail.dart';
+part '../../view/auth/widgets/auth_password.dart';
 //* themes
 part '../theme/app_text_theme.dart';
 
@@ -48,6 +63,7 @@ part '../theme/app_theme.dart';
 part '../language/app_lang_key.dart';
 part '../dime/app_dime.dart';
 part '../restart/app_restart.dart';
+part '../validators/app_validators.dart';
 //*controller 
 part '../../controller/c_languages.dart';
 

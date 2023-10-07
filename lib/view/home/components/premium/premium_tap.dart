@@ -5,15 +5,16 @@ class PremiumTap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Column(
-        children: [
-          
-          PremiumCardCategories(),
-          PremiumCardCategories(),
-          PremiumCardCategories(),
-          PremiumCardCategories(),
-        ],
+    return FutureBuilder(
+      future: ControllerApi.getPremium(context),
+      builder: (context, snapshot) => SingleChildScrollView(
+        child: Column(
+          children: [
+            PremiumCardCategories(model:snapshot.data!.games,name: AppLangKey.games, ),
+            PremiumCardCategories(model:snapshot.data!.artDesign,name: AppLangKey.artDesign,),
+            PremiumCardCategories(model:snapshot.data!.education,name: AppLangKey.education,),
+          ],
+        ),
       ),
     );
   }

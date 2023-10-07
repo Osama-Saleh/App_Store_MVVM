@@ -27,7 +27,7 @@ class _AppMaterialState extends State<AppMaterial> {
             localizationsDelegates: context.localizationDelegates,
             supportedLocales: context.supportedLocales,
             locale: context.locale,
-            home:const PageSplash(),
+            home:const LoginView(),
           );
   }
 }

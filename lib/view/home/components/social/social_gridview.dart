@@ -11,7 +11,7 @@ class SocialGridView extends StatelessWidget {
       future: ControllerApi.getSocial(context),
 
       builder: (context, snapshot) {
-        
+        snapshot.data;
         if(snapshot.connectionState == ConnectionState.done ){
           return GridView.builder(
           itemCount: snapshot.data?.length,
@@ -21,7 +21,6 @@ class SocialGridView extends StatelessWidget {
             mainAxisSpacing: 2,
           ),
           itemBuilder: (context, index) {
-            // print(snapshot.data![0].);
             return  SocialCard(socialModel: snapshot.data![index]);
           },
         );

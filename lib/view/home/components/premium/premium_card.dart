@@ -1,26 +1,25 @@
 part of '../../../../utils/import-path/app_import_path.dart';
 
 class PremiumCard extends StatelessWidget {
-  const PremiumCard({super.key});
+  const PremiumCard({super.key, this.games});
+  final GamesModel? games;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         InkWell(
-          onTap: () {
-            
-          },
+          onTap: () {},
           child: Container(
             clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.sp)
-            ),
+            decoration:
+                BoxDecoration(borderRadius: BorderRadius.circular(10.sp)),
             child: Stack(
               children: [
                 CustomNetworkImage(
-                  imageUrl: AppMedia.testImageNetwork,
+                  imageUrl: '${games?.image}',
                   height: 120.h,
+                  width: 140.w,
                 ),
                 Positioned(
                   bottom: 0,
@@ -32,14 +31,17 @@ class PremiumCard extends StatelessWidget {
                     color: AppColor.blackCardSocial,
                     child: Row(
                       children: [
-                        Text(
-                          'facbook',
-                          style: AppTextTheme.bLarge(context)
-                              ?.copyWith(color: AppColor.bgBlack),
+                        Expanded(
+                          child: Text(
+                            '${games?.nameApp}',
+                            overflow: TextOverflow.ellipsis,
+                            style: AppTextTheme.bLarge(context)?.copyWith(
+                              color: AppColor.bgBlack,
+                            ),
+                          ),
                         ),
-                        Spacer(),
                         Text(
-                          '10 ${AppLangKey.jd.tr()}',
+                          '${games?.price} ${AppLangKey.jd.tr()}',
                           style: AppTextTheme.bMedium(context)
                               ?.copyWith(color: AppColor.bgBlack),
                         ),

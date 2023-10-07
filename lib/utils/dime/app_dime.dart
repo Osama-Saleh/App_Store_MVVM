@@ -19,4 +19,6 @@ class AppDime {
   static  double xxxl = xxl * _base;
   /// [xxxxl] = '256.0'
   static  double xxxxl = xxxl * _base;
+  /// [FullScreen] 
+  static  double fullScreen = 1;
 }
