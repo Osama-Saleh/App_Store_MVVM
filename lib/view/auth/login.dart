@@ -5,14 +5,14 @@ class LoginView extends StatelessWidget {
   static GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+  ControllerAuth authController = Provider.of<ControllerAuth>(context);    return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all((AppDime.l).w),
           child: Form(
             key: formKey,
             child: Container(
-                height: 1.sh,
+              height: 1.sh,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -30,7 +30,12 @@ class LoginView extends StatelessWidget {
                   AuthForget(
                     onTap: () {
                       log('forget pass');
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => ForgetView(),),);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ForgetView(),
+                        ),
+                      );
                     },
                   ),
                   AuthButton(
@@ -46,7 +51,7 @@ class LoginView extends StatelessWidget {
                       first: AppLangKey.notAccount.tr(),
                       second: AppLangKey.register.tr(),
                       onTap: () {
-                        log('register');
+                        Navigator.push(context, MaterialPageRoute(builder: (context) =>const RegisterView(),));
                       })
                 ],
               ),

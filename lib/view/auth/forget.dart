@@ -6,6 +6,7 @@ class ForgetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
           padding: EdgeInsets.all((AppDime.l).w),
           child: Form(
@@ -15,13 +16,20 @@ class ForgetView extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  //* logo
                   const AuthLogo(),
+                  SizedBox(
+                    height: (AppDime.md).h,
+                  ),
+                  Text(AppLangKey.hintResetPass.tr(),
+                  textAlign: TextAlign.center,
+                  ),
                   SizedBox(
                     height: (AppDime.md).h,
                   ),
                   //* Email
                   const AuthEmail(),
-                  SizedBox(
+                  SizedBox( 
                     height: (AppDime.md).h,
                   ),
                   

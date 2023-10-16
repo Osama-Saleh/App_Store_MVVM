@@ -33,7 +33,10 @@ part '../../view/home/components/social/social_gridview.dart';
 part '../../view/webview/page_webview.dart';
 part '../../view/auth/login.dart';
 part '../../view/auth/forget.dart';
+part'../../view/auth/register.dart';
 
+//* models
+part'../../model/auth/user_auth.dart';
 
 //* widgets
 part '../../widgets/custom_app_bar.dart';
@@ -66,6 +69,7 @@ part '../restart/app_restart.dart';
 part '../validators/app_validators.dart';
 //*controller 
 part '../../controller/c_languages.dart';
+part '../../controller/c_auth.dart';
 
 //* start APP
 part '../../start-app/start_app.dart';

@@ -26,4 +26,15 @@ class AppValidators
     }
     return null;
   }
+
+   ///[ConfirmPasswrod]
+   //* value is secound textField and pass first TextField to compare them the same or not
+  static String? ConfirmPasswrod(String? value,String? pass){
+    if(value?.trim().isEmpty ?? true){
+      return messageEnterValue;
+    }else if (!validators.equals(value, pass)){
+      return messageConfirmPass;
+    }
+    return null;
+  }
 }

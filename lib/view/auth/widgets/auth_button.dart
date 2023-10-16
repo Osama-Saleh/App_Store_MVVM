@@ -23,7 +23,7 @@ class AuthButton extends StatelessWidget {
           : AppColor.splashBtnDark,
       child: Container(
         width: width ?? AppDime.fullScreen.sw,
-        height: height ?? AppDime.xl.h,
+        height: height ?? (AppDime.xxl)/1.7.h,
         margin: EdgeInsets.all(AppDime.md.w),
         decoration: BoxDecoration(
             gradient: LinearGradient(

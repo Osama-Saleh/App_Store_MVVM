@@ -9,7 +9,7 @@ class AuthLogo extends StatelessWidget {
       imageUrl: AppThemeChoose.isDark(context)
           ? AppMedia.appStoreDark
           : AppMedia.appStore,
-                  width: 0.55.sw,
+                  width: 0.40.sw,
 
     );
   }
