@@ -1,7 +1,11 @@
 part of '../utils/import-path/app_import_path.dart';
 class ControllerAuth extends ChangeNotifier{
-  TextEditingController? passController;
-  TextEditingController? confirmPassController;
+  TextEditingController passLoginController= TextEditingController();
+  TextEditingController passRegisetrController= TextEditingController();
+  TextEditingController confirmPassRegisetrController= TextEditingController();
+  TextEditingController mailRegisterController = TextEditingController();
+  TextEditingController mailLoginController = TextEditingController();
+  TextEditingController mailForgetController = TextEditingController();
   
     IconData  PassIcon = AppMedia.showPass;
     ///[isShow = true]
@@ -18,5 +22,5 @@ class ControllerAuth extends ChangeNotifier{
     //!----------------------- userData ---------------------------------------
     UserAuthModel userAuthModel = UserAuthModel();
     /// [currenPassword] used to save password  before match with confirm password
-    String currenPasswrod = '';
+    // String currenPasswrod = '';
 }

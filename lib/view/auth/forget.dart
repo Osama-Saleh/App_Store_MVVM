@@ -5,6 +5,7 @@ class ForgetView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ControllerAuth authController = Provider.of<ControllerAuth>(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Padding(
@@ -28,7 +29,7 @@ class ForgetView extends StatelessWidget {
                     height: (AppDime.md).h,
                   ),
                   //* Email
-                  const AuthEmail(),
+                  AuthEmail(controller: authController.mailForgetController),
                   SizedBox( 
                     height: (AppDime.md).h,
                   ),

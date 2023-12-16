@@ -21,13 +21,14 @@ class LoginView extends StatelessWidget {
                     height: (AppDime.md).h,
                   ),
                   //* Email
-                  const AuthEmail(),
+                  AuthEmail(controller: authController.mailLoginController),
                   SizedBox(
                     height: (AppDime.md).h,
                   ),
                   //* Passwrod
-                  const AuthPassword(),
+                  AuthPassword(controller: authController.passLoginController),
                   AuthForget(
+
                     onTap: () {
                       log('forget pass');
                       Navigator.push(
@@ -41,10 +42,12 @@ class LoginView extends StatelessWidget {
                   AuthButton(
                     title: AppLangKey.login.tr(),
                     onTap: () {
-                      if (formKey.currentState!.validate()) {
-                        log('validator');
-                        formKey.currentState?.save();
-                      }
+                      log('login ${authController.mailLoginController.text}');
+                      log('login ${authController.passLoginController.text}');
+                      // if (formKey.currentState!.validate()) {
+                      //   log('validator');
+                      //   formKey.currentState?.save();
+                      // }
                     },
                   ),
                   AuthFooter(

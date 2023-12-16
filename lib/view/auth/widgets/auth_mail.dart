@@ -1,6 +1,7 @@
 part of '../../../utils/import-path/app_import_path.dart';
 class AuthEmail extends StatelessWidget {
-  const AuthEmail({super.key});
+  final TextEditingController controller;
+  const AuthEmail({super.key,required this.controller});
   @override
   Widget build(BuildContext context) {
   ControllerAuth authController = Provider.of<ControllerAuth>(context);
@@ -11,6 +12,7 @@ class AuthEmail extends StatelessWidget {
                   prefixIcon: AppMedia.mail,
                   validator: AppValidators.isEmail,
                   onSaved: authController.userAuthModel.setMail,
+                  controller:controller ,
                 );
   }
 }

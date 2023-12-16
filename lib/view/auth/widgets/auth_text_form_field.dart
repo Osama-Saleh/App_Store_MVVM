@@ -9,6 +9,7 @@ class AuthTextFormField extends StatelessWidget {
   this.onSaved,
   this.onChanged,
   this.onTapSuffixIcon,
+  this.controller,
   });
   final String? hintText;
   final String? label;
@@ -21,9 +22,11 @@ class AuthTextFormField extends StatelessWidget {
   final Function(String?)? onSaved ;
   final Function(String)? onChanged ;
   final Function()? onTapSuffixIcon;
+  final TextEditingController? controller ;
 
   Widget build(BuildContext context) {
     return TextFormField(
+      controller:controller ,
       keyboardType:keyboardType ?? TextInputType.emailAddress,
       obscureText: obscureText,
       onTapOutside: (event) {

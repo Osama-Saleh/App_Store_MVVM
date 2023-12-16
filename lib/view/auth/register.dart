@@ -12,7 +12,7 @@ class RegisterView extends StatelessWidget {
           padding: EdgeInsets.all((AppDime.l).w),
           child: Form(
             key: formKey,
-            child: Container(
+            child: SizedBox(
               height: 1.sh,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -22,16 +22,18 @@ class RegisterView extends StatelessWidget {
                     height: (AppDime.md).h,
                   ),
                   //* Email
-                  const AuthEmail(),
+                  AuthEmail(controller: authContoller.mailRegisterController),
                   SizedBox(
                     height: (AppDime.md).h,
                   ),
                   //* Passwrod
                   AuthPassword(
+                    controller: authContoller.passRegisetrController,
                   ),
                   //* Confirm Passwrod
                   AuthPassword(
-                    isConfirm: true),
+                    controller: authContoller.confirmPassRegisetrController,
+                    isConfirm: true,),
                   AuthButton(
                     title: AppLangKey.register.tr(),
                     onTap: () {

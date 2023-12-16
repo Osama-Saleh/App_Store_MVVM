@@ -7,10 +7,11 @@ class AppValidators
   static final String messageCorrectPass = AppLangKey.errorPass.tr();
   static final String messageConfirmPass = AppLangKey.confirmPass.tr();
   static final String messagePrice = AppLangKey.errorPass.tr();
-
+  
   ///[CheckMail]
   static String? isEmail(String? value){
     if(value?.trim().isEmpty ?? true){
+    
       return messageEnterValue;
     }else if (!validators.isEmail(value!.trim())){
       return messageErrorEmail;
