@@ -12,7 +12,7 @@ class ForgetView extends StatelessWidget {
           padding: EdgeInsets.all((AppDime.l).w),
           child: Form(
             key: formKeyForget,
-            child: Container(
+            child: SizedBox(
                 height: 1.sh,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -34,12 +34,13 @@ class ForgetView extends StatelessWidget {
                     height: (AppDime.md).h,
                   ),
                   
-                  AuthButton(
+                  authController.isLoading ? const Center(child: CircularProgressIndicator(),) : AuthButton(
                     title: AppLangKey.resetPassword.tr(),
                     onTap: () {
                       if (formKeyForget.currentState!.validate()) {
                         log('validator');
                         formKeyForget.currentState?.save();
+                        authController.resetPassword();
                       }
                     },
                   ),

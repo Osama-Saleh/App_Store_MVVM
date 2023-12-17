@@ -23,7 +23,7 @@ class AuthFooter extends StatelessWidget {
         const  TextSpan(text: ' '),
           TextSpan(
               text: second,
-             recognizer:  TapGestureRecognizer()..onTap = onTap,
+              recognizer:  TapGestureRecognizer()..onTap = onTap,
               style: AppTextTheme.bMedium(context)?.copyWith(
                   color: AppThemeChoose.isDark(context)
                       ? AppColor.bgPink

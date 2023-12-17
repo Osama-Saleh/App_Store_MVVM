@@ -11,11 +11,7 @@ class _PageSplashState extends State<PageSplash> {
   @override
   void initState() {
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const PageHome(),
-          ));
+      Navigator.pushNamed(context, AppRoutes.pageLogin);
     });
     super.initState();
   }

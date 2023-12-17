@@ -1,8 +1,11 @@
 import 'dart:async';
 import 'dart:developer';
+import 'dart:io';
 import 'package:app_store/start-app/provider_list.dart';
 import 'package:app_store/utils/language/app_lang.dart';
 import 'package:app_store/widgets/drawer/custom_drawer.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -51,6 +54,7 @@ part '../../view/auth/widgets/auth_forget.dart';
 part '../../view/auth/widgets/auth_text_form_field.dart';
 part '../../view/auth/widgets/auth_mail.dart';
 part '../../view/auth/widgets/auth_password.dart';
+part '../../widgets/error/error_text.dart';
 //* themes
 part '../theme/app_text_theme.dart';
 
@@ -67,6 +71,8 @@ part '../language/app_lang_key.dart';
 part '../dime/app_dime.dart';
 part '../restart/app_restart.dart';
 part '../validators/app_validators.dart';
+part '../routes/routes.dart';
+part '../firebase/connection_firebase.dart';
 //*controller 
 part '../../controller/c_languages.dart';
 part '../../controller/c_auth.dart';

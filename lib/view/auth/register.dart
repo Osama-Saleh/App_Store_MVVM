@@ -1,17 +1,24 @@
 part of '../../utils/import-path/app_import_path.dart';
 
-class RegisterView extends StatelessWidget {
+class RegisterView extends StatefulWidget {
   const RegisterView({super.key});
   static GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
+  @override
+  State<RegisterView> createState() => _RegisterViewState();
+}
+
+class _RegisterViewState extends State<RegisterView> {
+ 
   @override
   Widget build(BuildContext context) {
-    ControllerAuth authContoller = Provider.of<ControllerAuth>(context);
+    ControllerAuth authController = Provider.of<ControllerAuth>(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all((AppDime.l).w),
           child: Form(
-            key: formKey,
+            key: RegisterView.formKey,
             child: SizedBox(
               height: 1.sh,
               child: Column(
@@ -22,26 +29,29 @@ class RegisterView extends StatelessWidget {
                     height: (AppDime.md).h,
                   ),
                   //* Email
-                  AuthEmail(controller: authContoller.mailRegisterController),
+                  AuthEmail(controller: authController.mailRegisterController),
                   SizedBox(
                     height: (AppDime.md).h,
                   ),
                   //* Passwrod
                   AuthPassword(
-                    controller: authContoller.passRegisetrController,
+                    controller: authController.passRegisetrController,
                   ),
                   //* Confirm Passwrod
                   AuthPassword(
-                    controller: authContoller.confirmPassRegisetrController,
+                    controller: authController.confirmPassRegisetrController,
                     isConfirm: true,),
-                  AuthButton(
+                  authController.isLoading ? const Center(child: CircularProgressIndicator(),) : AuthButton(
                     title: AppLangKey.register.tr(),
-                    onTap: () {
-                      if (formKey.currentState!.validate()) {
+                    onTap: () async{
+                      if (RegisterView.formKey.currentState!.validate()) {
                         log('validator');
-                        formKey.currentState?.save();
+                        RegisterView.formKey.currentState?.save();
+                        if(await authController.singInAuthAndRegister(isLogin: false) != null){
+                          log('created account');
+                        }
                       }
-                    log(authContoller.userAuthModel.dataUser());
+                    log(authController.userAuthModel.dataUser());
                     },
                   ),
                   AuthFooter(
