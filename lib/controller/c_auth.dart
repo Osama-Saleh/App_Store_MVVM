@@ -85,9 +85,9 @@ class ControllerAuth extends ChangeNotifier {
   }
 
   //***************************************************************/
-  /// [signOut]
+  /// [logOut]
   //***************************************************************/
-  Future<void> signOut() async {
+  Future<void> logOut() async {
     await FirebaseAuth.instance.signOut();
   }
 

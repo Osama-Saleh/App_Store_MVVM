@@ -2,13 +2,13 @@ part of '../../utils/import-path/app_import_path.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
-  static GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
   State<LoginView> createState() => _LoginViewState();
 }
 
 class _LoginViewState extends State<LoginView> {
+  static GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
 
   @override
@@ -19,7 +19,7 @@ class _LoginViewState extends State<LoginView> {
         child: Padding(
           padding: EdgeInsets.all((AppDime.l).w),
           child: Form(
-            key: LoginView.formKey,
+            key: formKey,
             child: Container(
               height: 1.sh,
               child: Column(
@@ -49,9 +49,9 @@ class _LoginViewState extends State<LoginView> {
                       : AuthButton(
                           title: AppLangKey.login.tr(),
                           onTap: () async{
-                            if (LoginView.formKey.currentState!.validate()) {
                               log('validator');
-                              LoginView.formKey.currentState?.save();
+                            if (formKey.currentState!.validate()) {
+                              formKey.currentState?.save();
                               if(await authController.singInAuthAndRegister(isLogin: true) != null){
                                 log('login successfully');
                               }

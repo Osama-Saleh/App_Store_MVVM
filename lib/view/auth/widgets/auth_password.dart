@@ -17,12 +17,12 @@ class AuthPassword extends StatelessWidget {
       keyboardType: TextInputType.number,
       obscureText: authController.isShow,
       prefixIcon: AppMedia.pass,
-      suffixIcon: authController.PassIcon,
+      suffixIcon: authController.PassIcon,  
       onTapSuffixIcon: () => authController.changePassIcon(),
       validator: (value) {
         return isConfirm
             ? AppValidators.ConfirmPasswrod(value,authController.passRegisetrController.text)
-            : AppValidators.isPass(authController.passRegisetrController.text);
+            : AppValidators.isPass(authController.passLoginController.text);
       },
       onSaved: authController.userAuthModel.setPass,
       // onChanged: (value) => isConfirm ? null : authController.currenPasswrod = value,

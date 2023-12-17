@@ -11,7 +11,7 @@ class DrawerSetting extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-var controllerTheme = Provider.of<ControllerTheme>(context);
+    var controllerTheme = Provider.of<ControllerTheme>(context);
     return Column(
       children: [
         DrawerSettingDesign(
@@ -27,9 +27,8 @@ var controllerTheme = Provider.of<ControllerTheme>(context);
           leadingIcon: AppMedia.theme,
           title: controllerTheme.themeName.tr(),
           trailing: Switch(
-            value: controllerTheme.isDark,
-            onChanged: controllerTheme.changeTheme
-          ),
+              value: controllerTheme.isDark,
+              onChanged: controllerTheme.changeTheme),
         ),
         DrawerSettingDesign(
           leadingIcon: AppMedia.terms,
@@ -39,8 +38,19 @@ var controllerTheme = Provider.of<ControllerTheme>(context);
         DrawerSettingDesign(
           leadingIcon: AppMedia.logout,
           title: AppLangKey.logout.tr(),
+          onTap: () {
+            showDialog(
+              context: context,
+              barrierDismissible: false,
+              builder: (context) {
+                return const LogOutDialog();
+              },
+            );
+          },
         ),
       ],
     );
   }
 }
+
+
