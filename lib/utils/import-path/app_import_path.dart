@@ -73,6 +73,7 @@ part '../restart/app_restart.dart';
 part '../validators/app_validators.dart';
 part '../routes/routes.dart';
 part '../firebase/connection_firebase.dart';
+part '../../view/auth/wrapper.dart';
 //*controller 
 part '../../controller/c_languages.dart';
 part '../../controller/c_auth.dart';
