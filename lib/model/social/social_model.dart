@@ -9,7 +9,7 @@ class SocialModel {
   String? download;
   String? image;
   List? images;
-  String? discription;
+  String? description;
   SocialModel({
     this.id,
     this.nameApp,
@@ -19,9 +19,8 @@ class SocialModel {
     this.download,
     this.image,
     this.images,
-    this.discription,
+    this.description,
   });
-
 
 
   Map<String, dynamic> toMap() {
@@ -34,7 +33,7 @@ class SocialModel {
       'download': download,
       'image': image,
       'images': images,
-      'discription': discription,
+      'description': description,
     };
   }
 
@@ -51,7 +50,7 @@ class SocialModel {
       // images: map['images'].fromMap(map['images']) ,
       // images: map['images'].map((item) => item.toString()) ,
       images: map['images'].cast<String>() ,
-      discription: map['discription'],
+      description: map['description'],
     );
   }
 

@@ -6,13 +6,15 @@ class SocialCard extends StatelessWidget {
  final SocialModel socialModel;
   const SocialCard({
     super.key,
-   required  this.socialModel
+   required this.socialModel,
   });
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsView(socialModel:socialModel ),));
+      },
       child: GridTile(
         footer: Card(
           color: AppColor.blackCardSocial,

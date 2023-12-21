@@ -36,7 +36,9 @@ part '../../view/home/components/social/social_gridview.dart';
 part '../../view/webview/page_webview.dart';
 part '../../view/auth/login.dart';
 part '../../view/auth/forget.dart';
-part'../../view/auth/register.dart';
+part '../../view/auth/register.dart';
+part '../../view/details/details.dart';
+part '../../view/details/widgets/details_card_info.dart';
 
 //* models
 part'../../model/auth/user_auth.dart';
@@ -55,6 +57,7 @@ part '../../view/auth/widgets/auth_text_form_field.dart';
 part '../../view/auth/widgets/auth_mail.dart';
 part '../../view/auth/widgets/auth_password.dart';
 part '../../widgets/error/error_text.dart';
+part '../../view/details/widgets/details_header.dart';
 //* themes
 part '../theme/app_text_theme.dart';
 

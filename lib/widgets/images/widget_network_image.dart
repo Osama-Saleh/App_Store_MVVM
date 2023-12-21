@@ -10,7 +10,7 @@ class CustomNetworkImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image(
       image: NetworkImage(imageUrl),
-      fit: BoxFit.cover,
+      fit: BoxFit.fill,
       width: width,
       height: height,
       // handel error image (URL not found)
