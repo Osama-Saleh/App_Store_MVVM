@@ -9,7 +9,9 @@ class PremiumCard extends StatelessWidget {
     return Column(
       children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) =>DetailsView(model: games) ,));
+          },
           child: Container(
             clipBehavior: Clip.antiAlias,
             decoration:

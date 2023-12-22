@@ -40,7 +40,7 @@ class GamesModel {
   String rating;
   String size;
   String image;
-  String discription;
+  String description;
   String price;
   String download;
   List? images;
@@ -53,7 +53,7 @@ class GamesModel {
     required this.rating,
     required this.size,
     required this.image,
-    required this.discription,
+    required this.description,
     required this.price,
     required this.download,
     required this.images,
@@ -70,7 +70,7 @@ class GamesModel {
       'rating': rating,
       'size': size,
       'image': image,
-      'discription': discription,
+      'description': description,
       'price': price,
       'download': download,
       'images': images,
@@ -87,7 +87,7 @@ class GamesModel {
       rating: json['rating'],
       size: json['size'],
       image: json['image'],
-      discription: json['description'],
+      description: json['description'],
       price: json['price'],
       download: json['download'],
       images: json['images'].cast<String>() ,

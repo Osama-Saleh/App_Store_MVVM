@@ -1,7 +1,7 @@
 part of '../../../utils/import-path/app_import_path.dart';
 class DetailsHeader extends StatelessWidget {
-  final SocialModel socialModel;
-  const DetailsHeader({super.key,required this.socialModel});
+  final dynamic model;
+  const DetailsHeader({super.key,required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class DetailsHeader extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.r),
                 ),
-                child: CustomNetworkImage(imageUrl: socialModel.image??'',
+                child: CustomNetworkImage(imageUrl: model.image??'',
                 
                 ),
               ),
@@ -22,10 +22,10 @@ class DetailsHeader extends StatelessWidget {
               SizedBox(
                 height: 100,
                 child: Row(children: [
-                  DetailsCardInfo(icon: Icons.category,title: socialModel.type??''),
-                  DetailsCardInfo(icon: Icons.stars,title: socialModel.rating??''),
-                  DetailsCardInfo(icon: Icons.memory,title: socialModel.size??''),
-                  DetailsCardInfo(icon: Icons.download,title: socialModel.download??''),
+                  DetailsCardInfo(icon: Icons.category,title: model.type??''),
+                  DetailsCardInfo(icon: Icons.stars,title: model.rating??''),
+                  DetailsCardInfo(icon: Icons.memory,title: model.size??''),
+                  DetailsCardInfo(icon: Icons.download,title: model.download??''),
                   
                 ]),
               ),

@@ -13,7 +13,7 @@ class SocialCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsView(socialModel:socialModel ),));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => DetailsView(model:socialModel ),));
       },
       child: GridTile(
         footer: Card(

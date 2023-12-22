@@ -1,8 +1,8 @@
 part of '../../utils/import-path/app_import_path.dart';
 
 class DetailsView extends StatefulWidget {
-  final SocialModel socialModel;
-  const DetailsView({super.key, required this.socialModel});
+  final dynamic model;
+  const DetailsView({super.key, required this.model});
 
   @override
   State<DetailsView> createState() => _DetailsViewState();
@@ -13,7 +13,7 @@ class _DetailsViewState extends State<DetailsView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('${widget.socialModel.nameApp}'),
+        title: Text('${widget.model.nameApp}'),
         actions: [OutlinedButton(onPressed: () {
           log('install');
         }, child: Text(AppLangKey.install.tr()))],
@@ -25,8 +25,8 @@ class _DetailsViewState extends State<DetailsView> {
             padding:  EdgeInsetsDirectional.symmetric(horizontal: 0.03.sw),
             child: Column(
               children: [
-                DetailsHeader(socialModel: widget.socialModel),
-                Text(widget.socialModel.description??'',
+                DetailsHeader(model: widget.model),
+                Text(widget.model.description??'',
                 textAlign: TextAlign.start,
                 style: TextStyle(fontSize: 20.sp),
                 ),
@@ -35,9 +35,9 @@ class _DetailsViewState extends State<DetailsView> {
                   child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
-                          return CustomNetworkImage(imageUrl: widget.socialModel.images![index]);
+                          return CustomNetworkImage(imageUrl: widget.model.images![index]);
                           },
-                          itemCount: widget.socialModel.images!.length,
+                          itemCount: widget.model.images!.length,
                           ),
                 )
               ],
