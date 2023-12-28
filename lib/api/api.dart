@@ -11,7 +11,7 @@ static  Future<List?> getSocial(BuildContext context) async {
       if (res.statusCode == 200) {
         // convert.jsonDecode(response.body);
         var response = convert.json.decode(res.body);
-      return  response['social'].map((json)=>SocialModel.fromMap(json)).toList();
+      return  response['social'].map((json)=>SocialModel.fromJson(json)).toList();
         // return SocialModel.fromMap(response).map((e)=>e).toList();
       }else{
         log(AppLangKey.errorFetchData.tr());
@@ -46,5 +46,6 @@ static  Future<List?> getSocial(BuildContext context) async {
     }
   }
   //*================================================================================
+ 
   //*================================================================================
 }

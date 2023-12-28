@@ -1,8 +1,12 @@
 part of '../../../utils/import-path/app_import_path.dart';
 
 class AuthPassword extends StatelessWidget {
-   const AuthPassword(
-      {super.key,this.onChanged, this.onSaved, this.isConfirm = false,required this.controller});
+  const AuthPassword(
+      {super.key,
+      this.onChanged,
+      this.onSaved,
+      this.isConfirm = false,
+      required this.controller});
   final Function(String?)? onSaved;
   final Function(String?)? onChanged;
   final bool isConfirm;
@@ -17,11 +21,12 @@ class AuthPassword extends StatelessWidget {
       keyboardType: TextInputType.number,
       obscureText: authController.isShow,
       prefixIcon: AppMedia.pass,
-      suffixIcon: authController.PassIcon,  
-      onTapSuffixIcon: () => authController.changePassIcon(),
+      suffixIcon: authController.PassIcon,
+      onTapSuffixIcon: authController.changePassIcon,
       validator: (value) {
         return isConfirm
-            ? AppValidators.ConfirmPasswrod(value,authController.passRegisetrController.text)
+            ? AppValidators.ConfirmPasswrod(
+                value, authController.passRegisetrController.text)
             : AppValidators.isPass(authController.passLoginController.text);
       },
       onSaved: authController.userAuthModel.setPass,

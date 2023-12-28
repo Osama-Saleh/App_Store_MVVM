@@ -14,7 +14,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:path_provider/path_provider.dart' as dir;
 import 'package:provider/provider.dart';
+import 'package:sqflite/sqflite.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
@@ -23,7 +25,7 @@ import '../../controller/c_theme.dart';
 import '../../model/premium/premium_model.dart';
 import '../../model/social/social_model.dart';
 import 'package:easy_localization/easy_localization.dart';
-
+import 'package:path/path.dart' as path;
 
 
 //* part Pages
@@ -39,6 +41,7 @@ part '../../view/auth/forget.dart';
 part '../../view/auth/register.dart';
 part '../../view/details/details.dart';
 part '../../view/details/widgets/details_card_info.dart';
+part '../../view/my_app/body.dart';
 
 //* models
 part'../../model/auth/user_auth.dart';
@@ -78,9 +81,16 @@ part '../routes/routes.dart';
 part '../firebase/connection_firebase.dart';
 part '../../view/auth/wrapper.dart';
 part '../../widgets/drawer/widget/logout_dialog.dart';
+part '../database/table.dart';
+part '../database/model_database.dart';
+part '../database/build_query_app.dart';
+part '../database/init_database.dart';
+
+
 //*controller 
 part '../../controller/c_languages.dart';
 part '../../controller/c_auth.dart';
+part '../../controller/c_database.dart';
 
 //* start APP
 part '../../start-app/start_app.dart';

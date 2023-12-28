@@ -23,7 +23,7 @@ class SocialModel {
   });
 
 
-  Map<String, dynamic> toMap() {
+  Map<String, dynamic> toJson() {
     return <String, dynamic>{
       'id': id,
       'nameApp': nameApp,
@@ -37,20 +37,20 @@ class SocialModel {
     };
   }
 
-  factory SocialModel.fromMap(Map<String, dynamic> map) {
+  factory SocialModel.fromJson(Map<String, dynamic> json) {
     return SocialModel(
-      id: map['id'] ,
-      nameApp: map['nameApp'] ,
-      type: map['type'],
-      rating: map['rating'],
-      size: map['size'],
-      download: map['download'],
-      image: map['image'],
+      id: json['id'] ,
+      nameApp: json['nameApp'] ,
+      type: json['type'],
+      rating: json['rating'],
+      size: json['size'],
+      download: json['download'],
+      image: json['image'],
       // json list as dinamic list
-      // images: map['images'].fromMap(map['images']) ,
-      // images: map['images'].map((item) => item.toString()) ,
-      images: map['images'].cast<String>() ,
-      description: map['description'],
+      // images: json['images'].fromMap(json['images']) ,
+      // images: json['images'].json((item) => item.toString()) ,
+      images: json['images'].cast<String>() ,
+      description: json['description'],
     );
   }
 

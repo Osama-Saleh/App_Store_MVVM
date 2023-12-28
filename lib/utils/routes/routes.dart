@@ -6,6 +6,7 @@ class AppRoutes {
   static const String registerView = 'RegisterView';
   static const String connectionFirebase = 'ConnectionFirebase';
   static const String wrapper = 'Wrapper';
+  static const String myApps = 'MyApps';
 
   static Map<String, Widget Function(BuildContext)> routes =  <String, WidgetBuilder>{
     pageSplash: (context) => const PageSplash(),
@@ -14,5 +15,6 @@ class AppRoutes {
     registerView: (context) => const RegisterView(),
     connectionFirebase: (context) => const ConnectionFirebase(),
     wrapper: (context) => const Wrapper(),
+    myApps: (context) => const PageMyApp(),
   };
 }

@@ -17,6 +17,7 @@ class DrawerSetting extends StatelessWidget {
         DrawerSettingDesign(
           leadingIcon: AppMedia.myApp,
           title: AppLangKey.myApps.tr(),
+          onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const PageMyApp(),))
         ),
         DrawerSettingDesign(
           leadingIcon: AppMedia.translate,
